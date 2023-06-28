@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function()
                     text: questionJson.question,
                     variants: questionJson.variants
                 };
-                vm.$data.timer = 15;
+                vm.$data.timer = 8;
                 vm.$data.correctVariant = null;
                 vm.$data.selectedVariant = null;
             });

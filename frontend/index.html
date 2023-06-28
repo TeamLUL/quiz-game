@@ -85,12 +85,14 @@
                         <span>{{ player.name }}</span>
                     </div>
                 </div>
-                <div class="loader"></div>
                 <p v-if="joinedRoomData.players.length < joinedRoomData.maxPlayers">Waiting for other players to join &nbsp;<b style="font-size: 20px;">{{ joinedRoomData.players.length }}/{{ joinedRoomData.maxPlayers }}</b></p>
                 <p v-if="joinedRoomData.players.length == joinedRoomData.maxPlayers">Game is starting...</p>
+                <div class="loader"></div>
+
                 <a href="" class="btn btn-cancel mt10">Cancel</a>
-                <br>
-                <p class="hint"><b>Hint:</b> for playing alone, create a game with <b>"Max players : 1"</b></p>
+                <br>         
+                <p class="hint"><b>Hint:</b> for playing alone, create a game with "Max players : 1"</p><br><br>
+                <p class="mt10 hint" style="text-align: center;">Made with <i class="icon ion-heart" style="color: #e25555;"></i> by LUL </p>
             </div>
 
             <div class="leaderboard" v-if="leaderBoard.length > 0">
@@ -122,7 +124,10 @@
                     <div class="mt20">
                         <a href="" class="btn btn-primary">Home ></a>
                     </div>
-                </div>
+                </div><br>
+                <hr class="mt20">
+                <p class="mt10 hint" style="text-align: center;">Made with <i class="icon ion-heart" style="color: #e25555;"></i> by LUL </p>
+
             </div>
 
             <div class="player-statistics">
@@ -132,13 +137,14 @@
                         <img class="change-avatar" v-if="user.id == player.id" v-on:click="openAvatarModal()" src="./images/change-avatar.png">
                     </div>
                     <span>{{ player.name }}</span>
-                </div>
+                <hr class="mt20"> </div>
             </div>
-
+           
             <h3 v-html="(question.id + 1) + '). ' + question.text" class="question-text"></h3>
 
-            <div class="timer-line" v-bind:style="{ width: (((15 - timer) / 15 ) * 100) + '%' }"></div>  
-            <!-- <div>{{timer}}</div> -->
+            <div class="timer-line" v-bind:style="{ width: (((9 - timer) / 9 ) * 100) + '%' }"></div>  
+            <div><br><center>{{timer}}</center></div>
+            <hr class="mt20">
             <div class="variants">
                 <div class="variant mt10" v-bind:class="{  correct : (variantId == correctVariant), wrong : (variantId == selectedVariant && variantId != correctVariant) }" v-for="variant, variantId in question.variants" v-on:click="answer(question.id, variantId)">
                     <span v-html="['A', 'B', 'C', 'D'][variantId] + ') ' "></span>
@@ -149,6 +155,8 @@
             <hr class="mt20">
             
             <p class="mt10 hint" style="text-align: left;">Total <b>10</b> questions</p>
+            <p class="mt10 hint" style="text-align: center;">Made with <i class="icon ion-heart" style="color: #e25555;"></i> by LUL </p>
+
 
         </div>
     </div>

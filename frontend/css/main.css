@@ -23,7 +23,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-image: linear-gradient(to right, rgb(28, 38, 89), rgb(18, 128, 113));
+      background-image: linear-gradient(to right, rgb(28, 38, 89), rgb(119 0 26));
       background-color: initial;
       display: flex;
       justify-content: center;
@@ -218,13 +218,13 @@
   }
   
   .variants .variant:hover {
-      /* background-color: rgb(235, 235, 235); */
+   background-color: rgb(4 59 107);
   }
   
   .timer-line {
       height: 10px;
       width: 0%;
-      background-color: blue;
+      background-color: #ff0039;
       border-radius: 10px;
       transition: 1s width;
   }
@@ -250,7 +250,9 @@
       width: 100%;
       height: 100%;
       z-index: 100000;
-      background-color: rgb(35 35 35);
+      /* background-color: rgb(35 35 35); */
+      background-color: rgb(24, 26, 27);
+      box-shadow: rgb(0 0 0) 1px 1px 11px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -261,11 +263,11 @@
   .loader {
       display: block;
       position: relative;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #ffffff;
+      width: 149px;
+      height: 149px;
+      border-radius: 100%;
+      border: 1px solid transparent;
+      border-top-color: #ff004a;
       -webkit-animation: spin 1s linear infinite;
       animation: spin 1s linear infinite;
   }
@@ -278,8 +280,8 @@
       right: 3px;
       bottom: 3px;
       border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: #65e034;
+      border: 3px solid #ffffff00;
+      border-top-color: #271f75;
       -webkit-animation: spin 1.5s linear infinite;
       animation: spin 1.5s linear infinite;
   }
@@ -292,7 +294,7 @@
       bottom: 9px;
       border-radius: 50%;
       border: 3px solid transparent;
-      border-top-color: #77aeff;
+      border-top-color: #334055;
       -webkit-animation: spin .5s linear infinite;
       animation: spin .5s linear infinite;
   }
@@ -343,7 +345,7 @@
   .user-picture {
       width: 75px;
       height: 75px;
-      background: url(../images/sprites.jpg);
+      background: url(https://i.imgur.com/wBwceFD.jpg);
       background-position: 0 0;
       border-radius: 50%;
       border: 3px solid blue;
